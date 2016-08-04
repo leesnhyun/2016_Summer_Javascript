@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function add(){
+            var output = 0;
+            alert(typeof(arguments));
+            alert(arguments.length);
+
+            for(var i=0; i<arguments.length; i++){
+                output += arguments[i];
+            }
+
+            return output;
+        }
+
+        var out = add(1,2,3,4,5);
+        alert(out);
+
+
+        (function(name){
+            alert(name);
+        })('name');
+
+        // Closure
+        function closureTest(num){
+
+            var test = 10;
+
+            return function innerFunc(){
+                return num + test;
+            }
+
+        }
+
+        alert(closureTest(10)());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

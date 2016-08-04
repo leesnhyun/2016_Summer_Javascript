@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function Rectangle(){
+
+            var width, height;
+
+            this.setWidth = function(w){
+                width = w;
+            }
+
+            this.setHeight = function(h){
+                height = h;
+            }
+
+            this.getWidth = function(){
+                return width;
+            }
+
+            this.getHeight = function(){
+                return height;
+            }
+
+            this.getArea = function(){
+                return width * height;
+            }
+        }
+
+        var rec1 = new Rectangle();
+        rec1.setWidth(20); rec1.setHeight(30);
+
+        rec1.prototype.width = 50;
+        alert(rec1.getArea());
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

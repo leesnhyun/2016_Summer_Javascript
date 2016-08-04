@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var car = {
+            name : 'car1',
+            model : 400,
+            color : 'black'
+        }
+
+        alert(car.hasOwnProperty('model'));
+
+        function Make(name){
+            this.name = name;
+            Make.prototype.print = function(){
+                alert('생성자 함수 make()의 새로운 메서드 추가');
+            }
+        }
+
+        var person = new Make('테스트');
+        person.print();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

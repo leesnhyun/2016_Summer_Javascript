@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        var x = 20;
+        function printTen(){
+            window.alert(10);
+        }
+
+        window.alert(window.x);
+        window.printTen();
+
+        var newWindow = open('', '',
+                'top=50, left=100, width=300, height=300'
+            );
+
+        newWindow.document.write('새로 생성된 창?');
+
+        setTimeout(function(){
+            newWindow.moveTo(5, 5);
+            newWindow.focus();
+        }, 1000);
+
+        window.onload = function(){
+            alert("test");
+        }
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        function Make(name, korean, english, math, history){
+            this.name = name;
+            this.korean = korean;
+            this.english = english;
+            this.math = math;
+            this.history = history;
+        }
+
+        var student = new Make('이승현', 12,23,34,53);
+
+        for(var item in student){
+            alert(item + " : " + student[item]);
+        }
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

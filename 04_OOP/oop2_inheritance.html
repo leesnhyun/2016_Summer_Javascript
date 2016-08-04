@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function A(){}
+        A.prototype.printA = function(){
+            alert('A');
+        }
+
+        function B(){}
+        B.prototype = new A();
+        B.prototype.printB = function(){
+            alert('B');
+        }
+
+        function C(){}
+        C.prototype = new B();
+        C.prototype.printC = function(){
+            alert('C');
+        }
+
+        var o = new C();
+        o.printA();
+        o.printB();
+        o.printC();
+
+        var D = Object.create(C.prototype);
+        D.printA();
+
+        function E(){}
+        E.prototype = C.prototype;
+        var e = new E(); e.printA();
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        var car = {
+            name : 'car1',
+            model : 400,
+            color : 'black',
+            run : function(){
+                alert(this.name + ' is running.. ');
+            }
+        };
+
+        var student = {
+            name : '홍길동'
+        };
+
+        car.coler = 'white';
+        delete car.coler;
+
+        student.run = car.run;
+
+        car.run();
+        student.run();
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
