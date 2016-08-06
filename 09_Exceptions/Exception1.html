@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function(){
+            var btn = document.getElementById('button');
+            var t5 = document.getElementById('t5');
+
+            function whenClick1(){
+                t5.innerHTML = 'Good Day!';
+                alert(this.value);
+            };
+
+            function whenClick2(){
+                t5.style.color = 'blue';
+            }
+
+            if(btn.attachEvent) {
+                btn.attachEvent('onclick', whenClick1);
+                btn.attachEvent('onclick', whenClick2);
+            } else {
+                btn.addEventListener('click', whenClick1);
+                btn.addEventListener('click', whenClick2);
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+<input id="button" type="button" value="이벤트"/>
+<h5 id="t5">좋은 날</h5>
+
+</body>
+
+</html>

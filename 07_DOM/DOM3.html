@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+
+    <script>
+        var headline = document.createElement('h3');
+        document.body.appendChild(headline);
+
+        setInterval(function(){
+            headline.innerHTML = new Date().toString();
+        }, 1000);
+
+    </script>
+
+
+</body>
+
+</html>

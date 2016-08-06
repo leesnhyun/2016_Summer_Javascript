@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+
+    <script>
+        var heading = document.createElement('h1');
+        var text = document.createTextNode("Hello nice day!");
+
+        var img = document.createElement('img');
+        //img.src = 'flower.jpg';
+        img.setAttribute('src', 'flower.jpg');
+        img.width = 200; img.height=200;
+
+        heading.appendChild(text);
+        document.body.appendChild(heading);
+        document.body.appendChild(img);
+
+        function changeImage(){
+            img.setAttribute('src', 'image2.jpg');
+            alert('변경됨');
+        }
+
+    </script>
+
+    <input type="button" onclick="changeImage()" value="변경하기!" />
+
+</body>
+
+</html>

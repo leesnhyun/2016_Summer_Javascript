@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        window.onload = function(){
+//            var form = document.getElementById('form');
+//            var pass1 = document.getElementById('password');
+//            var pass2 = document.getElementById('pass-check');
+//
+//            form.onsubmit = function(){
+//                if( pass1.value == pass2.value ){
+//                    return true;
+//                } else {
+//                    alert('비밀번호가 일치하지 않습니다.');
+//                    return false;
+//                }
+//            };
+//        }
+
+    function formCheck(){
+        var pass1 = document.getElementById('password');
+        var pass2 = document.getElementById('pass-check');
+
+        if( pass1.value == pass2.value ){
+            return true;
+        } else {
+            return function(){
+                alert('비밀번호가 일치하지 않습니다.');
+            };
+        }
+    }
+
+    </script>
+
+</head>
+
+<body>
+
+    <form id="form" action="eventTest.html" onsubmit="formCheck()">
+        <p>아이디 <input id="id" type="text"/></p>
+        <p>비밀번호 <input id="password" type="password"/></p>
+        <p>비밀번호 확인 <input id="pass-check" type="password"/></p>
+        <p><input id="sub1" type="submit" value="ㄱㄱ" ></p>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <h3 id="t1"> 좋은 날 </h3>
+
+    <script>
+        var t1 = document.getElementById('t1');
+
+        t1.onmouseover = function(evt){
+            var out = '이벤트 발생 객체\n';
+            out += evt || this;
+            alert(out);
+
+            this.innerHTML = 'Goody Day!';
+            this.style.color = 'blue';
+        }
+
+    </script>
+
+</body>
+
+</html>
