@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./jquery.min.2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            //var out = $('select > option:selected').val();
+            var out = $(':selected').val();
+            alert(out);
+            $(':text').focus();
+            $(':focus').css('background-color','blue');
+        });
+    </script>
+
+</head>
+<body>
+    <select>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+        <option>Four</option>
+    </select>
+    <input type="text" />
+</body>
+</html>

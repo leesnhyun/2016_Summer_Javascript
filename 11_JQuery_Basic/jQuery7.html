@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .change0 {
+            color:yellow;
+            background-color: green;
+        }
+
+        .change1 {
+            color:green;
+            background-color: yellow;
+        }
+    </style>
+
+    <script src="./jquery.min.2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h5').each(function(idx, item){
+               $(this).addClass('change' + idx);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <h5>변명 중에도 가장 어리석고 못난 변명은</h5>
+    <h5>"시간이 없어서" 하는 변명입니다.</h5>
+    <h5>by 에디슨</h5>
+</body>
+
+</html>
